@@ -65,58 +65,22 @@
 .breadcrumb-item{
 color: black;
 }
-/* 
-.gallery-photos{
-  width: 600px;
-  margin-left: 200px;
-}
-.gallery-images--ul{
-  background-color: black;
-  list-style-type: none;
-}
-.thumbnails-list{
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  justify-content: center;
-  height: 150px;
-  margin-left: 400px;
-}
-.media-image{
-  width: 200px;
-  height: 400px;
-}
-.picture{
-  background-color: green;
-}
-.gallery-thumbnails--toggle{
- display: none;
-}
-.gallery-close{
-  display: none;
-}
-.gallery-control--prev{
-  display: none;
-}
-.gallery-control--next{
-  display: none;
-} */
 
 /*Shopping*/
-.Shopping{
+/* .Shopping{
   background-color: blue;
-}
+} */
 
 .containerShoppingImages{
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
   margin-right: 20px;
 }
-.containerShoppingImages img {
+.selectedImage {
   cursor: pointer;
   width: 600px;
   height: 500px;
   margin-left: 170px;
-  background-color: lavender;
+  /* background-color: lavender; */
   border-radius: 5px;
 }
 .imgContainer{
@@ -133,13 +97,115 @@ color: black;
   cursor: pointer;
   border-radius: 5px;
 }
-.shoppingIcon{
-  line-height: 50px;
-}
+/*Details*/
 .shoppingDetails{
   float: right;
-  background-color: indianred;
+  /* background-color: blanchedalmond; */
+  margin-left: 40px;
 }
+.DetailsLogo{
+  width: 50px;
+  height: 50px;
+}
+.shoppingDetailsCategory{
+  margin-top: -15px;
+  opacity: .5;
+  font-weight: 500;
+}
+.rateOfFive{
+  font-weight: 700;
+  padding-top: 5px;
+}
+.rate{
+  opacity: .6;
+  font-weight: 700;
+  font-size: small;
+  padding-left: 10px;
+  padding-top: 7px;
+}
+.priceAfterSale{
+  font-size: x-large;
+  color: darkorchid;
+  font-weight: 700;
+}
+.priceBeforeSale{
+  text-decoration: line-through;
+  font-size: medium;
+  font-weight: 700;
+  opacity: .6;
+  padding-top: 5px;
+}
+.salePercentage{
+  font-size: small;
+  font-weight: 700;
+  background-color: yellow;
+  margin-top: 7px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.shoppingDetailsFlex{
+  display: flex;
+}
+.sizeCircles{
+    border-radius: 50%;
+    border: 1px solid gainsboro;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    line-height: 0;
+    cursor: pointer;
+    position: relative;
+}
+.sizeCircles::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.sizeCircles:hover {
+  background-color: lightgray;
+}
+.circle-txt {
+    position: absolute;
+    color: blue;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: smaller;
+    font-weight: 600;
+}
+.colorCircles{
+  border-radius: 50%;
+  border: 1px solid gainsboro;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  line-height: 0;
+  cursor: pointer;
+  position: relative;
+}
+.colorCircles::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.colorCircles:hover {
+  background-color: lightgray;
+}
+.quantityInput{
+  text-align: center;
+  background-color: lightgray;
+}
+.decrement{
+  cursor: pointer; 
+  border-radius: 50%;
+  background-color: yellow;
+}
+.increment{
+  cursor: pointer; 
+  border-radius: 50%;
+  background-color: yellow;
+}
+
 
 /* Footer */
 .site-footer
