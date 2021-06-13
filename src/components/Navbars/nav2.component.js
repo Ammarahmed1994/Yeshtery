@@ -25,6 +25,7 @@ class Nav2 extends Component {
   }
 
   render() {
+    console.log(`helee`, this.props)
     return (
       <div className="navbar2 container-fluid">
         <div>
@@ -39,7 +40,7 @@ class Nav2 extends Component {
             </Col>
             <Col className="fl nav2FontSize nav2Icons">
               <div >
-                <span className="paddingRight" onClick={() => { this.handleShow() }}><FontAwesomeIcon icon={faShoppingCart} size="lg" /><span className="badge badge-danger">3</span>{' '}Cart</span>
+                <span className="paddingRight" onClick={() => { this.handleShow() }}><FontAwesomeIcon icon={faShoppingCart} size="lg" /><span className="badge badge-danger">{this.props.itemCount}</span>{' '}Cart</span>
                 <span className="paddingRight"><FontAwesomeIcon icon={faHeart} size="lg" />{' '}Wishlist </span>
                 <span className="paddingRight"><FontAwesomeIcon icon={faUser} size="lg" />{' '} Login</span>
               </div>

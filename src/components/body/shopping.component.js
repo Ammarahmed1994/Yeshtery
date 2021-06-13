@@ -3,6 +3,7 @@ import { Col } from 'react-bootstrap';
 import StarRatings from 'react-star-ratings';
 import adidas from '../../images/adidas.svg';
 import { Button } from 'react-bootstrap';
+import Nav2 from '../Navbars/nav2.component';
 
 
 class Shopping extends Component {
@@ -10,7 +11,9 @@ class Shopping extends Component {
     super(props);
     this.state = {
       selectedImage: this.props.selectedProduct.Images[0],
-      value: 1
+      value: 1,
+      itemCount: 0,
+      product: {}
     };
   }
 
@@ -33,8 +36,16 @@ class Shopping extends Component {
     })
   }
 
+  addItem = () => {
+    this.setState({
+      itemCount: this.state.itemCount + 1
+    });;
+    console.log(`itee`, this.state.itemCount)
+  }
+
   render() {
     const selectedProduct = this.props.selectedProduct;
+    
     return (
       <div className=" container-fluid">
         <div className="containerShoppingImages row">
@@ -118,11 +129,12 @@ class Shopping extends Component {
               </div>
             </div>
             <div className="twoButtons">
-              <Button>Add To Cart</Button>
+              <Button onClick={()=>{this.addItem()}}>Add To Cart</Button>
               <Button variant="warning">Pickup From Store</Button>
             </div>
           </div>
         </div><br />
+        <Nav2 itemCount={this.state.itemCount}/>
       </div>
     )
   }
