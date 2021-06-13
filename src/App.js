@@ -13,7 +13,7 @@ import Nav2 from './components/Navbars/nav2.component';
 import Nav3 from './components/Navbars/nav3.component';
 import BreadCrumb from './components/body/breadCrumb.component';
 import Data from './components/body/data.component';
-import SimilarProducts from './components/body/SimilarProducts.component';
+// import SimilarProducts from './components/body/SimilarProducts.component';
 
 
 function App() {
@@ -28,7 +28,6 @@ function App() {
         <section>
           <BreadCrumb />
           <Data />
-          <SimilarProducts />
         </section>
         <Footer />
       </div>
