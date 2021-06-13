@@ -1,0 +1,164 @@
+/*Shopping*/
+
+.containerShoppingImages{
+    /* background-color: greenyellow; */
+    margin-right: 20px;
+  }
+  .selectedImage {
+    cursor: pointer;
+    width: 500px;
+    height: 500px;
+    margin-left: 200px;
+    /* background-color: lavender; */
+    border-radius: 5px;
+  }
+  .imgContainer{
+    width:100%;
+    display: flex;
+    justify-content: inherit;
+    flex-wrap: wrap;
+    margin-left: 230px;
+  }
+  .imgContainer img{
+    width: 100px;
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  /*Details*/
+  .shoppingDetails{
+    float: right;
+    /* background-color: blanchedalmond; */
+    margin-left: 40px;
+  }
+  .shoppingDetails p{
+    word-wrap: break-word;
+    width: 300px
+  }
+  .DetailsLogo{
+    width: 50px;
+    height: 50px;
+  }
+  .shoppingDetailsCategory{
+    margin-top: -15px;
+    opacity: .5;
+    font-weight: 500;
+  }
+  .rateOfFive{
+    font-weight: 700;
+    padding-top: 5px;
+  }
+  .rate{
+    opacity: .6;
+    font-weight: 700;
+    font-size: small;
+    padding-left: 10px;
+    padding-top: 7px;
+  }
+  .priceAfterSale{
+    font-size: x-large;
+    color: darkorchid;
+    font-weight: 700;
+  }
+  .priceBeforeSale{
+    text-decoration: line-through;
+    font-size: medium;
+    font-weight: 700;
+    opacity: .6;
+    padding-top: 5px;
+  }
+  .salePercentage{
+    font-size: small;
+    font-weight: 700;
+    background-color: yellow;
+    margin-top: 7px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .shoppingDetailsFlex{
+    display: flex;
+  }
+  .sizeCircles{
+      border-radius: 50%;
+      border: 1px solid gainsboro;
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+      line-height: 0;
+      cursor: pointer;
+      position: relative;
+  }
+  .sizeCircles::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  .sizeCircles:hover {
+    background-color: lightgray;
+  }
+  .circle-txt {
+      position: absolute;
+      color: blue;
+      bottom: 50%;
+      width: 100%;
+      text-align: center;
+      font-size: smaller;
+      font-weight: 600;
+  }
+  .colorCirclesBlack{
+    height: 70px;
+    width: 70px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: inline-block;
+  }
+  .colorCirclesRed{
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .colorCirclesBlack:hover{
+    border: 10px soild blue;
+  }
+  .colorCirclesRed:hover{
+    border: 2px soild blue;
+  }
+  
+  .quantityInput{
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 10% / 50%;
+  }
+  .decrement{
+    cursor: pointer; 
+    border-radius: 50%;
+    background-color: yellow;
+  }
+  .increment{
+    cursor: pointer; 
+    border-radius: 50%;
+    background-color: yellow;
+  }
+  .twoButtons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .twoButtons .btn-primary{
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 10% / 50%;
+    background-color: navy;
+    font-weight: 600;
+  }
+  .twoButtons .btn-warning{
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10% / 50%;
+    background-color: yellow;
+    font-weight: 600;
+  }

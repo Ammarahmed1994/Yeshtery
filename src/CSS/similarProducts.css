@@ -1,0 +1,60 @@
+
+/* Similar Products */
+.similarProducts{
+    margin-left:190px;
+  }
+  .similarProducts h4{
+    margin-left:190px;
+    padding-top: 20px;
+    color: navy;
+    font-weight: 700;
+  }
+  .similarProducts h5{
+    margin-left:190px;
+    padding-bottom: 10px;
+    opacity: .5;
+  }
+  .similarProductsCard{
+    display: flex;
+    margin-left: 190px;
+  }
+  .similarProductsCard .card{
+    margin-left: 10px;
+    margin-bottom: 50px;
+    border: 4px solid white;
+  }
+  
+  .similarProductsCard .rateOfFive{
+    font-weight: 700;
+    padding-top: 5px;
+  }
+  
+  .similarProductsCard .DetailsLogo{
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+  }
+  .similarProductsCard .priceAfterSale{
+    font-size: large;
+    color: darkorchid;
+    font-weight: 700;
+  }
+  .similarProductsCard .priceBeforeSale{
+    text-decoration: line-through;
+    font-size: medium;
+    font-weight: 700;
+    opacity: .6;
+    padding-top: 14px;
+  }
+  .similarProductsCard .salePercentage{
+    font-size: small;
+    font-weight: 700;
+    background-color: white;
+    padding-top: 10px;
+  }
+  .similarProductsCard .stars{
+  justify-content: space-evenly;
+  }
+  .pickupFrom{
+    margin-left: 15px;
+  }
