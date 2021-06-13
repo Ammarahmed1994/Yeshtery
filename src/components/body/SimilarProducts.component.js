@@ -3,6 +3,8 @@ import Shopping from './shopping.component';
 import{ Card} from 'react-bootstrap';
 import StarRatings from 'react-star-ratings';
 import adidas from '../../images/adidas.svg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
  
 class SimilarProducts extends Component {
   constructor(props) {
@@ -21,7 +23,7 @@ class SimilarProducts extends Component {
         {
           similarProducts.map((product, index)=> {
             return(<Card key={index} style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={product.img} style={{ height:'150px' }}/>
+            <LazyLoadImage variant="top" src={product.img} effect="blur" style={{ height:'150px' }}/>
             <Card.Body>
               <Card.Text>
                 {product.description}
@@ -31,7 +33,7 @@ class SimilarProducts extends Component {
                         <div className="row">
                         <div className="priceBeforeSale col-md-4">{product.priceBeforeSale} LE</div>
                         <div className="salePercentage">{product.salePercentage}% Off</div>
-                        <img src={adidas} alt="adidas" className="DetailsLogo" />
+                        <LazyLoadImage src={adidas} effect="blur" alt="adidas" className="DetailsLogo" />
                       </div>
                       <div className="row stars">
                         <div >

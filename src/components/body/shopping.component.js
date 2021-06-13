@@ -4,6 +4,8 @@ import StarRatings from 'react-star-ratings';
 import adidas from '../../images/adidas.svg';
 import { Button } from 'react-bootstrap';
 import Nav2 from '../Navbars/nav2.component';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 class Shopping extends Component {
@@ -52,12 +54,13 @@ class Shopping extends Component {
 
           <div className="Shopping">
 
-            <img src={this.state.selectedImage} alt="selected" className="selectedImage" />
+            <LazyLoadImage src={this.state.selectedImage} effect="blur" alt="selected" className="selectedImage" />
             <div className="imgContainer">
               {
                 selectedProduct.Images.map((img, index) => (
-                  <img
+                 <LazyLoadImage
                     key={index}
+                    effect="blur"
                     src={img}
                     alt="thumbnails"
                     onClick={() => this.imageClick(img)}
@@ -68,8 +71,6 @@ class Shopping extends Component {
           <div className="shoppingDetails">
             <img src={adidas} alt="adidas" className="DetailsLogo" />
             <p>
-              {/* Adidas Black T-shirt Lorem ipsum dolor sit <br />
-              amet, consectetur adipiscing elit */}
               {selectedProduct.description}
           </p>
             <div className="shoppingDetailsCategory">{selectedProduct.category}</div>
