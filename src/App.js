@@ -11,14 +11,12 @@ import './SCSS/footer.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Footer from './components/footer.component';
-import Data from './components/body/data.component';
+import Shopping from './components/body/Shopping.component';
 
 function App() {
   return (
     <div className="App">
-      <section>
-        <Data />
-      </section>
+      <Shopping />
       <Footer />
     </div>
   );

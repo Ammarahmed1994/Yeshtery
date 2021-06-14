@@ -12,7 +12,7 @@ import SimilarProducts from './SimilarProducts.component';
 
 import adidas from '../../images/adidas.svg';
 
-class Data extends Component {
+class Shopping extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -214,4 +214,4 @@ class Data extends Component {
     }
 }
 
-export default Data;
+export default Shopping;

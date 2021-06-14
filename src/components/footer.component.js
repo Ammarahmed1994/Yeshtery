@@ -34,7 +34,7 @@ class Footer extends Component {
             <div class="col-sm-12 col-md-4 foot">
               <h5>Subscribe to our newsletter</h5>
               <input type="text" placeholder="  Enter your Email" className="subscribeInput"/>
-              <Button className="SubscribeButton">Subscribe<FontAwesomeIcon icon={faPaperPlane} /></Button>
+              <Button className="SubscribeButton">Subscribe <FontAwesomeIcon icon={faPaperPlane} /></Button>
               <div className="row">
             <div class="col-xs-6 col-md-3">
               <ul class="footer-links">
