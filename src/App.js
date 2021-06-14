@@ -3,7 +3,8 @@ import './CSS/nav1.css';
 import './CSS/nav2.css';
 import './CSS/nav3.css';
 import './CSS/shoppingDetails.css';
-import './CSS/footer.css';
+ import './CSS/footer.css';
+// import './CSS/footer1.scss';
 import './CSS/similarProducts.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -13,20 +14,17 @@ import Nav2 from './components/Navbars/nav2.component';
 import Nav3 from './components/Navbars/nav3.component';
 import BreadCrumb from './components/body/breadCrumb.component';
 import Data from './components/body/data.component';
-// import SimilarProducts from './components/body/SimilarProducts.component';
-
 
 function App() {
   return (
       <div className="App">
-
         <header >
-          <Nav1 />
+          {/* <Nav1 />
           <Nav2 />
-          <Nav3 />
+          <Nav3 /> */}
         </header>
         <section>
-          <BreadCrumb />
+          {/* <BreadCrumb /> */}
           <Data />
         </section>
         <Footer />

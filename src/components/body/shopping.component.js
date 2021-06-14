@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Col } from 'react-bootstrap';
+import { Col, Button } from 'react-bootstrap';
 import StarRatings from 'react-star-ratings';
 import adidas from '../../images/adidas.svg';
-import { Button } from 'react-bootstrap';
-import Nav2 from '../Navbars/nav2.component';
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import PropTypes from 'prop-types';
+
 
 
 class Shopping extends Component {
@@ -14,7 +15,6 @@ class Shopping extends Component {
     this.state = {
       selectedImage: this.props.selectedProduct.Images[0],
       value: 1,
-      itemCount: 0,
       product: {}
     };
   }
@@ -39,21 +39,17 @@ class Shopping extends Component {
   }
 
   addItem = () => {
-    this.setState({
-      itemCount: this.state.itemCount + 1
-    });;
-    console.log(`itee`, this.state.itemCount)
+      let itemCount = this.props.itemCount + 1
+   
   }
 
   render() {
     const selectedProduct = this.props.selectedProduct;
-    
     return (
       <div className=" container-fluid">
         <div className="containerShoppingImages row">
 
           <div className="Shopping">
-
             <LazyLoadImage src={this.state.selectedImage} effect="blur" alt="selected" className="selectedImage" />
             <div className="imgContainer">
               {
@@ -135,10 +131,16 @@ class Shopping extends Component {
             </div>
           </div>
         </div><br />
-        <Nav2 itemCount={this.state.itemCount}/>
+
       </div>
     )
   }
 }
+
+Shopping.propTypes= {
+  selectedProduct: PropTypes.object,
+  itemCount :PropTypes.number
+}
+
 
 export default Shopping;
