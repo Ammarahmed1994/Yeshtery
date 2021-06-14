@@ -13,7 +13,7 @@ class Nav3 extends Component {
   <li>Kids</li>
   <li>Best Sellers</li>
   <li>New Arrivals</li>
-  <li>Offers</li>
+  <li className="offer">Offers</li>
 </ul>
   
   </Navbar>

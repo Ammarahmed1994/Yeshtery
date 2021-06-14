@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import cash from '../images/cash.svg';
 import visa from '../images/visa.svg';
@@ -9,6 +11,7 @@ import facebook from '../images/facebook.svg';
 import linkedin from '../images/linkedin.svg';
 import instagram from '../images/instagram.svg';
 import twitter from '../images/twitter.svg';
+import { Button } from 'react-bootstrap';
 
 class Footer extends Component {
   render() {
@@ -28,8 +31,12 @@ class Footer extends Component {
              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
 
-
-            <div class="col-xs-6 col-md-2">
+            <div class="col-sm-12 col-md-4 foot">
+              <h5>Subscribe to our newsletter</h5>
+              <input type="text" placeholder="  Enter your Email" className="subscribeInput"/>
+              <Button className="SubscribeButton">Subscribe<FontAwesomeIcon icon={faPaperPlane} /></Button>
+              <div className="row">
+            <div class="col-xs-6 col-md-3">
               <ul class="footer-links">
                 <li class="footerList1">About Us</li>
                 <li class="footerList1">Contact Us</li>
@@ -42,7 +49,6 @@ class Footer extends Component {
             </div>
 
             <div class="col-xs-6 col-md-3">
-              
               <ul class="footer-links">
                 <li><img src={facebook} alt="facebook"  height="25px" className="threeIcons"/>/YESHTERY</li>
                 <li><img src={linkedin} alt="linkedin"  height="25px" className="threeIcons"/>/YESHTERY</li>
@@ -50,7 +56,8 @@ class Footer extends Component {
                 <li><img src={twitter} alt="twitter"  height="25px" className="threeIcons"/>/YESHTERY</li>
               </ul>
             </div>
-
+            </div>
+</div>
 
           </div>
           <hr />

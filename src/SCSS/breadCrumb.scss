@@ -2,7 +2,15 @@
 	.breadcrumb {
 		margin-left: 170px;
 		background-color: white;
+	.active{
+		color: black;
+		font-weight: 600;
+		text-decoration: underline;
+	}a{
+		color: black;
+		font-weight: 600;
 	}
+} 
 }
 .breadcrumb-item {
 	color: black;
