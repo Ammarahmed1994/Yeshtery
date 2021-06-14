@@ -19,12 +19,12 @@ class Data extends Component {
             selectedProduct: {},
             similarProducts: [],
             selectedImage: '',
-            value: 1,
+            productQuantity: 1,
             itemCount: 0
         };
     }
 
-   async componentWillMount() {
+    async componentWillMount() {
         this.setState({
             selectedProduct: {
                 description: "Adidas Black T-shirt Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -34,6 +34,7 @@ class Data extends Component {
                 priceAfterSale: 1200,
                 priceBeforeSale: 1560,
                 salePercentage: 30,
+                sizes: ['Small', 'Medium', 'Large', 'XLarge', 'XXLarge'],
                 Images: ["https://source.unsplash.com/aZjw7xI3QAA/1144x763",
                     "https://source.unsplash.com/c77MgFOt7e0/1144x763",
                     "https://picsum.photos/id/1018/1000/600/",
@@ -80,31 +81,27 @@ class Data extends Component {
                 pickFrom: 'Mall of Arabia',
                 img: "https://picsum.photos/id/1015/1000/600/"
             },
-
             ],
-            
         });
     };
 
     async componentDidMount() {
-        console.log(`proo`, this.state.selectedProduct)
         this.setState({
             selectedImage: this.state.selectedProduct.Images[0]
         })
-    } 
+    }
 
     increment = () => {
         this.setState({
-            value: this.state.value + 1
+            productQuantity: this.state.productQuantity + 1
         })
     }
 
     decrement = () => {
         this.setState({
-            value: this.state.value > 0 ? this.state.value - 1 : 0
+            productQuantity: this.state.productQuantity > 0 ? this.state.productQuantity - 1 : 0
         });;
     }
-
 
     imageClick = (img) => {
         this.setState({
@@ -114,22 +111,19 @@ class Data extends Component {
 
     addItem = () => {
         this.setState({
-            itemCount : this.state.itemCount + 1
-        })   
+            itemCount: this.state.itemCount + 1
+        })
     }
 
     render() {
         return (
-
             <div>
                 <Nav1 />
-                <Nav2 selectedProduct={this.state.selectedProduct} itemCount={this.state.itemCount} />
+                <Nav2 selectedProduct={this.state.selectedProduct} productQuantity={this.state.productQuantity} itemCount={this.state.itemCount} />
                 <Nav3 />
                 <BreadCrumb />
-                {/* <Shopping selectedProduct={this.state.selectedProduct} itemCount={this.state.itemCount} /> */}
                 <div className=" container-fluid">
                     <div className="containerShoppingImages row">
-
                         <div className="Shopping">
                             <LazyLoadImage src={this.state.selectedImage} effect="blur" alt="selected" className="selectedImage" />
                             <div className="imgContainer">
@@ -174,13 +168,14 @@ class Data extends Component {
                             <div>
                                 <h5>Size</h5>
                                 <div className="shoppingDetailsFlex">
-                                    <div className="sizeCircles"><div className="circle-txt">Small</div></div>
-                                    <div className="sizeCircles"><div className="circle-txt">Medium</div></div>
-                                    <div className="sizeCircles"><div className="circle-txt">Large</div></div>
-                                    <div className="sizeCircles"><div className="circle-txt">XLarge</div></div>
-                                    <div className="sizeCircles"><div className="circle-txt">XXLarge</div></div>
+                                        {
+                                             this.state.selectedProduct.sizes.map((size, index) => (
+                                                <div key={index}  className="sizeCircles">
+                                                <div className="circle-txt">{size}</div>
+                                                </div>
+                                             ))
+                                        }
                                 </div>
-
                             </div>
                             <hr />
                             <div>
@@ -200,7 +195,7 @@ class Data extends Component {
                                     <button className="decrement" onClick={() => this.decrement()}>
                                         &mdash;
 </button>
-                                    <input type="text" className="quantityInput" value={this.state.value} />
+                                    <input type="text" className="quantityInput" value={this.state.productQuantity} />
                                     <button className="increment" onClick={() => this.increment()}>
                                         &#xff0b;
 </button>
@@ -212,10 +207,7 @@ class Data extends Component {
                             </div>
                         </div>
                     </div><br />
-                    {/* <Nav2 itemCount={this.state.itemCount}/> */}
                 </div>
-    
-
                 <SimilarProducts similarProducts={this.state.similarProducts} />
             </div>
         );

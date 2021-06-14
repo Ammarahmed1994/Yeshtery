@@ -47,37 +47,45 @@ class Nav2 extends Component {
           </Row>
         </div>
 
+        {
+          this.props.itemCount > 0
+            ?
+            <Modal show={this.state.show} className="cartModal">
+              <div onClick={() => { this.handleClose() }}><span className="closeModal">X</span></div>
+              <h4>My Cart</h4>
+              <h6>Cart Summary</h6>
+              <table>
+                <tr>
+                  <td rowspan="1"><img class="profilePicture" src={this.props.selectedProduct.Images[0]} /></td>
+                  <td><div className="modalDescription">{this.props.selectedProduct.description}</div><br />
+                    <div className="cartQuantity">Quantity: {this.props.productQuantity}</div>
+                    <div className="row cartDetails">
+                      <div className="cartPriceAfterSale">{this.props.selectedProduct.priceAfterSale} LE</div>
+                      <Button>Remove</Button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colSpan="2" className="total">Total: {this.props.selectedProduct.priceAfterSale * this.props.productQuantity} LE</td>
+                </tr>
+              </table>
+              <div className="row cartButtons">
+                <Button variant="warning">Review Cart</Button>
+                <Button>Complete Checkout</Button>
+              </div>
+            </Modal>
+            :
+            <Modal show={this.state.show} className="cartModal">
+              <div onClick={() => { this.handleClose() }}><span className="closeModal">X</span></div>
+              <h4>My Cart</h4>
+              <h5 className="emptyCartHeader">Sorry your cart is empty</h5>
+              <img src="https://media.istockphoto.com/vectors/empty-shopping-bag-icon-online-business-vector-icon-template-vector-id861576608?k=6&m=861576608&s=612x612&w=0&h=lhzmWud1lD4GNFwM4UczmiHFYR4CZJHHFxkx689GOkQ=" />
+            </Modal>
 
-        <Modal show={this.state.show} className="cartModal">
-          <div onClick={()=>{this.handleClose()}}><span className="closeModal">X</span></div>
-          <h4>My Cart</h4>
-          <h6>Cart Summary</h6>
-          <table>
-            <tr>
-              <td rowspan="1"><img class="profilePicture" src="https://picsum.photos/id/1015/1000/600/" /></td>
-              <td> Lorem ipsum dolor sit amet<br /> consectetur adipiscing elit.<br />
-                <div className="cartQuantity">Quantity: 1</div>
-                <div className="row cartDetails">
-                  <div className="priceAfterSale">1,200 LE</div>
-                  <Button>Remove</Button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td colSpan="2" className="total">Total: 1,200 LE</td>
-            </tr>
-          </table>
-          <div className="row cartButtons">
-            <Button variant="warning">Review Cart</Button>
-            <Button>Complete Checkout</Button>
-          </div>
-        </Modal>
+        }
 
-        {/* <Modal show={this.state.show} className="cartModal">
-          <h4>My Cart</h4>
-          <h6>Cart Summary</h6>
-         Your cart is empty
-        </Modal> */}
+
+
 
       </div>
 
