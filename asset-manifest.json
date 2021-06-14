@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Yeshtery/static/css/main.5a26229d.chunk.css",
+    "main.css": "/Yeshtery/static/css/main.6ef295a9.chunk.css",
     "main.js": "/Yeshtery/static/js/main.3627eb89.chunk.js",
     "main.js.map": "/Yeshtery/static/js/main.3627eb89.chunk.js.map",
     "runtime-main.js": "/Yeshtery/static/js/runtime-main.a1af2625.js",
@@ -12,7 +12,7 @@
     "static/js/3.642264d6.chunk.js.map": "/Yeshtery/static/js/3.642264d6.chunk.js.map",
     "index.html": "/Yeshtery/index.html",
     "static/css/2.3a8a6688.chunk.css.map": "/Yeshtery/static/css/2.3a8a6688.chunk.css.map",
-    "static/css/main.5a26229d.chunk.css.map": "/Yeshtery/static/css/main.5a26229d.chunk.css.map",
+    "static/css/main.6ef295a9.chunk.css.map": "/Yeshtery/static/css/main.6ef295a9.chunk.css.map",
     "static/js/2.8b76ccdb.chunk.js.LICENSE.txt": "/Yeshtery/static/js/2.8b76ccdb.chunk.js.LICENSE.txt",
     "static/media/adidas.6654feb2.svg": "/Yeshtery/static/media/adidas.6654feb2.svg",
     "static/media/blue.15039d6e.svg": "/Yeshtery/static/media/blue.15039d6e.svg",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.a1af2625.js",
     "static/css/2.3a8a6688.chunk.css",
     "static/js/2.8b76ccdb.chunk.js",
-    "static/css/main.5a26229d.chunk.css",
+    "static/css/main.6ef295a9.chunk.css",
     "static/js/main.3627eb89.chunk.js"
   ]
 }
