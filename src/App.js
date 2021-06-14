@@ -1,11 +1,13 @@
 import './App.css';
-import './CSS/nav1.css';
-import './CSS/nav2.css';
-import './CSS/nav3.css';
-import './CSS/shoppingDetails.css';
- import './CSS/footer.css';
-// import './CSS/footer1.scss';
-import './CSS/similarProducts.css';
+import './SCSS/nav1.scss';
+import './SCSS/nav2.scss';
+import './SCSS/nav3.scss';
+import './SCSS/shoppingDetails.scss';
+import './SCSS/similarProducts.scss';
+import './SCSS/cartModal.scss';
+import './SCSS/breadCrumb.scss';
+ import './SCSS/footer.scss';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Footer from './components/footer.component';

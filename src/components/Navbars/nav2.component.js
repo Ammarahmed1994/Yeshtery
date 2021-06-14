@@ -25,7 +25,6 @@ class Nav2 extends Component {
   }
 
   render() {
-    console.log(`helee`, this.props)
     return (
       <div className="navbar2 container-fluid">
         <div>
