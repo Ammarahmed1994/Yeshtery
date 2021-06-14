@@ -10,7 +10,7 @@ class BreadCrumb extends Component {
           <Breadcrumb.Item active > CLothing </Breadcrumb.Item>
           <Breadcrumb.Item active >Tops</Breadcrumb.Item>
           <Breadcrumb.Item active >Adidas</Breadcrumb.Item>
-          <Breadcrumb.Item className="underlined">Adidas Black T-Shirt</Breadcrumb.Item>
+          <Breadcrumb.Item >Adidas Black T-Shirt</Breadcrumb.Item>
         </Breadcrumb>
       </div>
     );
