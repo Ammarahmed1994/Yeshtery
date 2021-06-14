@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Shopping from './shopping.component';
 import{ Card} from 'react-bootstrap';
 import StarRatings from 'react-star-ratings';
 import adidas from '../../images/adidas.svg';
